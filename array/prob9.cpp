@@ -3,7 +3,7 @@ using namespace std;
 
 //Left rotation byOne
 
-int leftRoationByone(int arr[], int n)
+void leftRoationByone(int arr[], int n)
 {
     
    
@@ -15,19 +15,26 @@ int leftRoationByone(int arr[], int n)
     arr[n-1]=temp;
     
     
+    
+}
+// left rotation by D 
+void leftRoationByD(int arr[], int n,int d)
+{
 
+    for (int i = 0; i < d; i++)
+    {
+        leftRoationByone(arr,n);
+    }
+    
     for (int i = 0; i < n; i++)
     {
         cout<<arr[i]<<" ";
-    }
-    
-    return 0;
-    
+    }    
 }
 int main()
 {
     int arr[] = {3,5,0,8,9};
-    leftRoationByone(arr,5);
+    leftRoationByD(arr,5,2);
 
     return 0;
 }
